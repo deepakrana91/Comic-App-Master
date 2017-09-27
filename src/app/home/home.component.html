@@ -1,0 +1,56 @@
+  <div class="row">
+    <div class="col-xs-12">
+        <div class="container">
+         <h3>WELCOME TO COMICSWORLD</h3> 
+        </div>  
+        <div>
+
+        </div> 
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 *ngIf="auth.isAuthenticated()">
+                You are logged in!
+              </h4>
+              <h4 *ngIf="!auth.isAuthenticated()">
+                You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
+              </h4>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="http://cdn3-www.comingsoon.net/assets/uploads/1970/01/file_581956_marvel-movies-2021-0872013-121741.jpg" class="img-responsive">
+              </a>
+          </div>
+           <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="http://cdn.movieweb.com/img.news.tops/NE1M30G4p2Pb38_2_b.jpg" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="https://images.moviepilot.com/images/c_limit,q_auto:good,w_600/marvel-vs-dc-7-the-flash-vs-quickksilver-e7fc58b6-1cea-4cce-89af-12492832ace6-jpeg-251925/marvel-vs-dc-7-the-flash-vs-quickksilver.jpg" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="https://i0.wp.com/media2.slashfilm.com/slashfilm/wp/wp-content/images/iron-man-the-experience.jpg" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="https://vignette.wikia.nocookie.net/marveldatabase/images/7/7e/Arc_-_Marvel_Legacy.jpg/revision/latest/scale-to-width-down/670?cb=20170429192509" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                   <img src="https://www.cheatsheet.com/wp-content/uploads/2015/12/Marvel-Comics.jpg" class="img-responsive">
+              </a>
+          </div>
+      </div>
+      
+
+

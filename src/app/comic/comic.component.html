@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-6">
+        <div class="well well-sm">WELCOME TO COMICSWORLD</div>    
+        <div class="alert alert-info" role="alert">
+            <strong>Note!</strong> Some character do not have any comic data, so if you do not get any comic please select
+            different character.
+          </div>          
+                         <p style="font-weight:bold"><em>Click on get Comics button to get the comics details</em></p>
+                         <button class="btn btn-success "(click)= "getComics()"> Get Comics</button>
+                        <ul>            
+                            <p>{{message}}</p>
+                            <li *ngFor="let comic of allComic">
+                             <a style="cursor: pointer;"
+                             [routerLink]= "[comic.id]" 
+                                class="list-group-item clearfix">
+                               <div class="pull-left">
+                                   <h4 class="list-group-item-heading">ID:{{comic.id}} <br>
+                                    Title:{{ comic.name }}</h4>
+                                   <p class="list-group-item-text">{{ comic.description}}</p>
+                               </div>
+                               <span class="pull-right">
+                               <img
+                                 [src]="comic.imageUrl"
+                                 alt="{{ comic.name }}"
+                                 class="img-responsive"
+                                 style="max-height: 80px;">
+                              </span>
+                             </a>
+                          </li>
+                        </ul>
+               
+    </div>
+  
+     <div class="col-xs-6">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+  

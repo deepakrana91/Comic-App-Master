@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="character.imageUrl"
+        alt="{{ character.name }}"
+        class="img-responsive"
+        style="max-height: 300px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <h1>{{ character.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        <h5 class="alert alert-info"><strong>Description</strong></h5>
+        <h4 class="mb-0" *ngIf="character.description; else nodesc">{{ character.description }}</h4>
+        <ng-template #nodesc>
+          <h3>No Description Available for the selected character</h3>
+        </ng-template>
+      </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <button class="btn btn-primary"  routerLink="/comic" (click)="setId()">View Comics</button>
+  </div>
+</div>

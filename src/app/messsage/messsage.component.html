@@ -1,0 +1,32 @@
+
+<div class="row">
+        <div class="col-md-6">
+                <div class="well well-sm">WELCOME TO COMICSWORLD</div>              
+                                 <p class="alert alert-info">Click on get character button to get the characters</p>
+                                <button class="btn btn-success "(click)= "get()"> Get Characters</button>
+                                
+                                <ul >
+                                    <li *ngFor="let character of allCharacters">
+                                     <a style="cursor: pointer;"
+                                     [routerLink]= "[character.id]"                        
+                                        class="list-group-item clearfix">
+                                       <div class="pull-left">
+                                           <h4 class="list-group-item-heading">ID:{{character.id}} NAME:{{ character.name }}</h4>
+                                           <p class="list-group-item-text">{{ character.description}}</p>
+                                       </div>
+                                       <span class="pull-right">
+                                       <img
+                                         [src]="character.imageUrl"
+                                         alt="{{ character.name }}"
+                                         class="img-responsive"
+                                         style="max-height: 80px;">
+                                      </span>
+                                     </a>
+                                  </li>
+                                </ul>
+                       
+            </div>
+        <div class="col-md-6">
+         <router-outlet></router-outlet>
+        </div>
+      </div>

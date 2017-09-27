@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="comic.imageUrl"
+        alt="{{comic.name}}"
+        class="img-responsive"
+        style="max-height: 500px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <h1>{{ comic.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12" >
+          <h5 class="alert alert-info"><strong>Description</strong></h5>
+        <h4 class="mb-0" *ngIf="comic.description; else nodesc">{{ comic.description }}</h4>
+        <ng-template #nodesc>
+          <h3>No Description Available for the selected comic</h3>
+        </ng-template>
+      </div>
+</div>
