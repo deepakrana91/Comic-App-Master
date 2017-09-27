@@ -56,6 +56,7 @@ export class DataService {
     let url=`https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&characters=${id}&orderBy=focDate&limit=10&&apikey=${this.publicKey}&ts=${this.ts}&hash=${hash}`
     
      return this.http.get(url).map(responce => responce.json());
+
   }
 
   

@@ -35,6 +35,8 @@ export class ComicComponent implements OnInit {
           newComic.imageUrl = result.data.results[index].thumbnail.path+'/landscape_large.'+result.data.results[index].thumbnail.extension;
           this.allComic.push(newComic);
         }
+
+        
         
       //  console.log(this.character)
       })

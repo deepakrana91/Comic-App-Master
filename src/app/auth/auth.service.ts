@@ -21,7 +21,6 @@ export class AuthService {
 
   public login(): void {
     this.auth0.authorize();
-    this.tokenvalid=true;
   }
 
   public handleAuthentication(): void {
@@ -30,7 +29,6 @@ export class AuthService {
         window.location.hash = '';
         this.setSession(authResult);
         this.router.navigate(['/home']);
-        this.tokenvalid=true;
       } else if (err) {
         this.router.navigate(['/home']);
         console.log(err);
@@ -54,7 +52,6 @@ export class AuthService {
     localStorage.removeItem('expires_at');
     // Go back to the home route
     this.router.navigate(['/']);
-    this.tokenvalid=false;
   }
 
   public isAuthenticated(): boolean {
