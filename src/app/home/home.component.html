@@ -8,6 +8,10 @@
         </div> 
     </div>
   </div>
+
+  <!-- checking the authentication using the auth service and auth0 API,
+     to check whether customer logged in or not -->
+
     <div class="row">
         <div class="col-xs-12">
             <h4 *ngIf="auth.isAuthenticated()">
@@ -19,6 +23,7 @@
         </div>
       </div>
 
+      <!-- using bootstrap grid loayout to isplay some comic character images on homepage -->
       <div class="row">
           <div class="col-xs-4">
               <a routerLink="/home" class="thumbnail">

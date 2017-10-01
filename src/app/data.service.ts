@@ -21,7 +21,7 @@ export class DataService {
   constructor(private http: Http) {   
   }
 
-  /**Get the character list from the array. */
+  /**Get the character list from the array from marvels sites. */
   getCharacterList(): Observable<any> {
 
     let hash = Md5.hashStr(this.ts + this.privateKey + this.publicKey);

@@ -16,6 +16,7 @@ export class MesssageComponent implements OnInit {
 
   }
   get() {
+   
 
     this.dataservice.getCharacterList().subscribe(result => {
       // console.log(`Marvel all characters: ${result.data.results}`);

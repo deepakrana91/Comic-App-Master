@@ -8,6 +8,7 @@ import { AuthService } from './../auth/auth.service';
 })
 export class HomeComponent implements OnInit {
 
+  // calling the auth service to check the login status in view
   constructor(public auth: AuthService) { }
 
   ngOnInit() {
